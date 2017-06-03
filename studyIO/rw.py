@@ -3,14 +3,17 @@
 
 try:
     f = open('/Users/yy/pythonS/python_study/txtIo.txt', 'r')
-    print f.read()
+    print '文件内容：', f.read()
+    print '文件名：', f.name
+    print '是否已关闭：', f.closed
+    print '访问模式：', f.mode
 finally:
     if f:
         f.close()
 
 
 with open('/Users/yy/pythonS/python_study/txtIo.txt', 'rb') as f:
-    print f.read()
+    print 'rb:', f.read()
 
 # 调用read()会一次性读取文件的全部内容，如果文件有10G，内存就爆了，所以，要保险起见，可以反复
 # 调用read(size)方法，每次最多读取size个字节的内容。另外，
@@ -18,7 +21,7 @@ with open('/Users/yy/pythonS/python_study/txtIo.txt', 'rb') as f:
 
 with open('/Users/yy/pythonS/python_study/txtIo.txt', 'r') as f:
     for line in f.readlines():
-        print(line.strip())
+        print 'r:', (line.strip())
 
 
 

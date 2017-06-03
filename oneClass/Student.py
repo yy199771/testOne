@@ -26,11 +26,11 @@ print s.age
 Student.set_score = MethodType(set_score, None, Student)
 s2 = Student()
 s2.set_score(100)
-print s2.score
+print 's2:', s2.score
 
 s3 = Student()
 s3.set_score(88)
-print s3.score
+print 's3:', s3.score
 
 #使用__slots__ 限制class属性:__slots__仅对当前类有效,继承类无效
 class Student2():
@@ -45,7 +45,7 @@ ss.name = 'Jack'
 print ss.name
 
 ss.age = 25
-print ss.age
+print 'ss:', ss.age
 
 ss.set_score = 101
-print ss.score
+print 'ss:', ss.score
